@@ -7,7 +7,7 @@ import { API_KEY } from '../../src/App'
 function MovieInfo({selectedMovie,setSelectedMovie}) {
     const [movieInfo, setMovieInfo] = useState()
         useEffect(() => {
-            axios.get(`http://www.omdbapi.com/?i=${selectedMovie}&apikey=${API_KEY}`)
+            axios.get(`https://www.omdbapi.com/?i=${selectedMovie}&apikey=${API_KEY}`)
                  .then((response) => setMovieInfo(response.data))
         },[selectedMovie])
   return (
