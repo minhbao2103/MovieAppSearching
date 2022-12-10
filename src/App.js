@@ -15,7 +15,7 @@ function App() {
 
   // console.log(selectedMovie)
   const fetchData = async(searchString) => {
-     const response = await axios.get(`http://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}`)
+     const response = await axios.get(`https://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}`)
         setMovieList(response.data.Search)
         // console.log(response)
     }
